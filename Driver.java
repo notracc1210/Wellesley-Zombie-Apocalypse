@@ -26,11 +26,7 @@ public class Driver{
     }
 
     public void moveTo(Position pos){
-
-    }
-
-    public void choose(Option option){
-
+        this.currentPosition = pos;
     }
 
     public void applyConsequence(Consequence c){
