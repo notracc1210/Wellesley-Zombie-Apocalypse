@@ -12,27 +12,31 @@ public class Driver{
     private static final double CAREER_CENTER_SUCCESS_RATE = 0.10;
 
     public static void main(String[] args){
-        System.out.println("Welleslsey Zombie Apocalypse")
+        System.out.println("Welleslsey Zombie Apocalypse");
     }
 
-    public Driver(GameMap map, int startingHP){
+    public Driver(GameMap map){
         this.map = map;
-        this.hp = startingHP;
+        this.hp = 100;
         this.rng = new Random();
     }
 
-    public int rollDice{
+    public int rollDice(){
         int rolledNum = rng.nextInt(6) + 1;
     }
 
     public void moveTo(Position pos){
         this.currentPosition = pos;
     }
+    /**
+     *
 
     public void applyConsequence(Consequence c){
 
 
     }
+    */
+
     /**
      * @ return true if user is dead/hp <= 0
      */
@@ -44,8 +48,10 @@ public class Driver{
      * revives user if !rebirthUsed and user has token
      * @ return
      */
-    public boolean tryRebirth(){
-
+    public void tryRebirth(){
+        if(!rebirthUsed && hasRebirthToken){
+            hp += 50;
+        }
     }
     /**
      * @ return hp
