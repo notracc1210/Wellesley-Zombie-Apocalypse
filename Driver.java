@@ -13,4 +13,48 @@ public class Driver{
         System.out.println("Welleslsey Zombie Apocalypse")
     }
 
+    public Driver(GameMap map, int startingHP){
+        this.map = map;
+        this.hp = startingHP;
+    }
+
+    public int rollDice{
+
+    }
+
+    public void moveTo(Position pos){
+
+    }
+
+    public void choose(Option option){
+
+    }
+
+    public void applyConsequence(Consequence c){
+
+    }
+
+    public boolean isDead(){
+
+    }
+
+    /**
+     * revives user if !rebirthUsed and user has token
+     * @ return
+     */
+    public boolean tryRebirth(){
+
+    }
+
+    public int getHP(){
+
+    }
+
+    public int getAggressiveness(){
+
+    }
+
+    public void setAggressiveness(int value){
+
+    }
 }
