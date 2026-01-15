@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Driver{
     private int hp;
     private int aggressiveness;
@@ -16,10 +18,11 @@ public class Driver{
     public Driver(GameMap map, int startingHP){
         this.map = map;
         this.hp = startingHP;
+        this.rng = new Random();
     }
 
     public int rollDice{
-
+        int rolledNum = rng.nextInt(6) + 1;
     }
 
     public void moveTo(Position pos){
