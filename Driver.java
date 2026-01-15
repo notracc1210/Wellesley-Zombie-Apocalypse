@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Driver{
     private int hp;
     private int aggressiveness;
@@ -6,36 +8,36 @@ public class Driver{
     private boolean forceZombieNextRoll; //set if roulette fails
     private GameMap map;
     private Position currentPosition;
+    private int currentPositionIndex;
     private Random rng;
     private static final double CAREER_CENTER_SUCCESS_RATE = 0.10;
 
     public static void main(String[] args){
-        System.out.println("Welleslsey Zombie Apocalypse")
+        System.out.println("Welleslsey Zombie Apocalypse");
     }
 
-    public Driver(GameMap map, int startingHP){
+    public Driver(GameMap map){
         this.map = map;
-        this.hp = startingHP;
+        this.hp = 100;
+        this.aggressiveness = 20;
     }
 
-    public int rollDice{
-
+    public int rollDice(){
+        return rng.nextInt(6) + 1;
     }
 
     public void moveTo(Position pos){
-
+        this.currentPosition = pos;
     }
 
-    public void choose(Option option){
-
-    }
-
-    public void applyConsequence(Consequence c){
-
+    public String applyConsequence(Option o){
+        this.hp += o.getHPChange();
+        this.aggressiveness += o.getAggresivenessChange();
+        return o.getConsequence().getDescription();
     }
 
     public boolean isDead(){
-
+        return this.hp <= 0;
     }
 
     /**
@@ -43,18 +45,19 @@ public class Driver{
      * @ return
      */
     public boolean tryRebirth(){
-
+        if(hasRebirthToken && !rebirthUsed){
+            rebirthUsed = true;
+            hp = 50; //revive with 50 HP
+            return true;
+        }
+        return false;
     }
 
     public int getHP(){
-
+        return hp;
     }
 
     public int getAggressiveness(){
-
-    }
-
-    public void setAggressiveness(int value){
-
+        return aggressiveness;
     }
 }

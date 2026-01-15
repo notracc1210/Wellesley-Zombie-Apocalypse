@@ -8,4 +8,8 @@ class Consequence
         consequence_HP = h;
         consequence_aggresiveness = a;
     }
+
+    public String getDescription(){
+        return description;
+    }
 }
