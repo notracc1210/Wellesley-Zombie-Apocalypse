@@ -31,10 +31,13 @@ public class Driver{
 
     public void applyConsequence(Consequence c){
 
+
     }
-
+    /**
+     * @ return true if user is dead/hp <= 0
+     */
     public boolean isDead(){
-
+        return hp <= 0;
     }
 
     /**
@@ -44,16 +47,25 @@ public class Driver{
     public boolean tryRebirth(){
 
     }
-
+    /**
+     * @ return hp
+     */
     public int getHP(){
-
+        return hp;
     }
 
+    /**
+     * getter for agressiveness
+     * @ return aggressiveness
+     */
     public int getAggressiveness(){
 
     }
-
+    /**
+     * aggressiveness setter
+     * @ param takes an int value
+     */
     public void setAggressiveness(int value){
-
+        this.aggressiveness = value;
     }
 }
