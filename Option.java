@@ -15,4 +15,8 @@ class Option
     public int getAggresivenessChange(){
         return consequence.consequence_aggresiveness;
     }
+
+    public Consequence getConsequence(){
+        return consequence;
+    }
 }
