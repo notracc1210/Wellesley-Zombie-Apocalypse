@@ -101,10 +101,13 @@ public class Driver{
         this.aggressiveness = 20;
         this.currentPositionIndex = 0;
     }
+    /**
+     *
 
     public int rollDice(){
         return rng.nextInt(1) + 1;
     }
+    */
 
     public void moveTo(Position pos){
         this.currentPosition = pos;
@@ -195,11 +198,17 @@ public class Driver{
         }
         return false;
     }
-
+    /**
+     * @ return hp
+     */
     public int getHP(){
         return hp;
     }
 
+    /**
+     * getter for agressiveness
+     * @ return aggressiveness
+     */
     public int getAggressiveness(){
         return aggressiveness;
     }
