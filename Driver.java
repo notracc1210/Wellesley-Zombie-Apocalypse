@@ -105,7 +105,7 @@ public class Driver{
      *
 
     public int rollDice(){
-        return rng.nextInt(1) + 1;
+        return rng.nextInt(6) + 1;
     }
     */
 
@@ -133,7 +133,7 @@ public class Driver{
             if(puzzleSolved){
                 // Puzzle solved - grant rebirth token
                 this.hasRebirthToken = true;
-                this.hp += 15;
+                this.hp = Math.min(this.hp + 15, 100);
                 this.aggressiveness += 10;
                 System.out.println("\n--- Reward for Success ---");
                 System.out.println("You have gained a REBIRTH TOKEN!");
@@ -165,7 +165,7 @@ public class Driver{
         }
         
         // Apply HP and aggressiveness changes
-        this.hp += consequence.getHP();
+        this.hp = Math.min(this.hp + consequence.getHP(), 100);
         this.aggressiveness += consequence.getAggressiveness();
         
         // Handle special mechanics
