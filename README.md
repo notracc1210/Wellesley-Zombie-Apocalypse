@@ -60,9 +60,9 @@ java -version
 
 ## Authors
 
-[Angelina]https://github.com/azurex084-cpu
-[Loza]https://github.com/lozabek
-[Tracy]https://github.com/notracc1210
+[Angelina](https://github.com/azurex084-cpu)
+[Loza](https://github.com/lozabek)
+[Tracy](https://github.com/notracc1210)
 
 
 ## License
