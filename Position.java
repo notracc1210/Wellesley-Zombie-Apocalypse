@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-class Position
+public class Position
 {
     String name;
     String description;
@@ -11,9 +11,21 @@ class Position
         description = d;
         options = new ArrayList<>();
     }
+
+    public String getName(){
+        return name;
+    }
+
+    public String getDescription(){
+        return description;
+    }
     
     public void addOption(Option o){
         options.add(o);
+    }
+
+    public ArrayList<Option> getOptions(){
+        return options;
     }
     
 }

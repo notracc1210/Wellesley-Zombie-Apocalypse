@@ -16,11 +16,15 @@ public class Ending {
     
 
     public boolean isEnding(){
-        return currentHP <= 0 || isAlive;
+        return currentHP <= 0 || !isAlive;
     }
 
     public String getEndingName() {
         return endingName;
+    }
+
+    public String getAchievement() {
+        return achievement;
     }
 
     public String getDescription() {
