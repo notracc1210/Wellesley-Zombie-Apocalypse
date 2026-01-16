@@ -1,62 +1,74 @@
 # Wellesley-Zombie-Apocalypse
 
-Simple overview of use/purpose.
+A text-based survival game set on Wellesley College campus during a zombie apocalypse. Make strategic choices to survive, balancing your HP and aggressiveness as you navigate different locations and encounter various challenges.
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+Wellesley Zombie Apocalypse is an interactive text adventure game where the campus has been overrun by zombies. You begin with 100 HP and must navigate through various locations on campus by rolling dice to move forward. At each location, you face different situations and choices that affect your HP and aggressiveness levels. Your decisions shape your survival story and determine which of multiple unique endings you receive. The game features probabilistic outcomes, different encounter types, and a branching narrative system based on your stats.
 
 ## Getting Started
 
 ### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+* Java 8 or higher
+* Command line/terminal access
 
 ### Installing
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+1. Clone or download the repository
+2. Navigate to the project directory:
+   ```
+   cd /path/to/Wellesley-Zombie-Apocalypse
+   ```
 
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
+1. Compile all Java files:
+   ```
+   javac *.java
+   ```
+
+2. Run the game:
+   ```
+   java Driver
+   ```
+
+3. Follow the on-screen prompts to navigate through the game by pressing Enter to roll the dice at each location
+
+## Gameplay
+
+* **HP (Health Points)**: Your strength, stamina, and will to keep going (starts at 100)
+* **Aggressiveness**: How far you're willing to go to survive (starts at 20)
+* **Dice Roll**: Controls how many locations you advance forward each turn
+* **Choices**: At each location, select from available options that have different consequences for your stats
+* **Endings**: Multiple unique endings based on your final HP, aggressiveness level, and alive status
+
+## Game Features
+
+* Multiple location encounters across Wellesley College campus
+* Dynamic consequence system with both deterministic and probabilistic outcomes
+* Stat-based ending system with unique achievement names and descriptions
+* Immersive narrative and atmospheric storytelling
+* Replayability with different outcome paths based on player choices
 
 ## Help
 
-Any advise for common problems or issues.
+If the game doesn't compile, ensure all `.java` files are in the same directory and you have Java installed. Check your Java version with:
 ```
-command to run if program contains helper info
+java -version
 ```
 
 ## Authors
 
-Contributors names and contact info
+[Angelina]https://github.com/azurex084-cpu
+[Loza]https://github.com/lozabek
+[Tracy]https://github.com/notracc1210
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
-
-## Version History
-
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
 
 ## License
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+This project is licensed under the MIT License
 
 ## Acknowledgments
 
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+Special mention to Wellesley College for the inspiration and setting.

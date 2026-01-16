@@ -32,57 +32,65 @@ public class Ending {
     }
 
     public void setEnding() {
-        if (!isAlive || currentHP <= 0) {
+        // Death ending - always checked first, returns early
+        if (currentHP <= 0) {
             endingName = "Freshman Forever";
             achievement = "Orientation Never Ends";
             description = "You fall during the chaos. Days later, familiar footsteps echo through campus. Welcome to Wellesley. Again.";
+            return;
         }
 
-        else if (currentAggressiveness >= 90 && currentHP <= 30) {
+        // Perfect balance ending - prioritize true balance
+        if (currentHP >= 80 && currentAggressiveness >= 45 && currentAggressiveness <= 55) {
+            endingName = "Perfect Run";
+            achievement = "Dean's List: Apocalypse Edition";
+            description = "You balance force, mercy, and leadership flawlessly. Wellesley survives. Somehow, you still graduate.";
+            return;
+        }
+
+        // Maximum aggression self-destruction
+        if (currentAggressiveness >= 90 && currentHP <= 30) {
             endingName = "Self-Destruction";
             achievement = "Aggression Without Control";
-            description = "You survive the zombies, but not yourself. Violence works—until it doesn’t.";
+            description = "You survive the zombies, but not yourself. Violence works—until it doesn't.";
+            return;
         }
 
-        else if (currentHP >= 80 && currentAggressiveness >= 45 && currentAggressiveness <= 55) {
-            endingName = "Perfect Run";
-            achievement = "Dean’s List: Apocalypse Edition";
-            description = "You balance force, mercy, and leadership flawlessly. Wellesley survives. Somehow, you still graduate.";
-        }
-
-        else if (currentAggressiveness >= 85 && currentHP >= 20) {
+        // Very high aggression path
+        if (currentAggressiveness >= 85 && currentHP >= 20) {
             endingName = "Campus Cleansed";
             achievement = "Final Girl (or Final Boss)";
             description = "By the time rescue arrives, there is nothing left to save. Only silence remains.";
+            return;
         }
 
-        else if (currentAggressiveness >= 70 && currentHP >= 30) {
+        // High aggression path
+        if (currentAggressiveness >= 70 && currentHP >= 30) {
             endingName = "Blood on the Path";
             achievement = "Scream Tunnel";
             description = "You fight your way through campus alone. The legends were right. The tunnel remembers you.";
+            return;
         }
 
-        else if (currentHP >= 70 && currentAggressiveness <= 20) {
+        // Pacifist with excellent health
+        if (currentHP >= 70 && currentAggressiveness <= 20) {
             endingName = "Silent Survival";
             achievement = "The Last Librarian";
             description = "You barricade yourself in Clapp Library, surviving in silence while the world collapses outside.";
+            return;
         }
 
-        else if (currentHP >= 50 && currentAggressiveness <= 30) {
+        // Balanced survivor
+        if (currentHP >= 50 && currentAggressiveness <= 30) {
             endingName = "Escape Without Scars";
             achievement = "Wellesley Is a Feeling";
             description = "You flee campus under cover of fog, leaving Wellesley behind before it consumes you.";
+            return;
         }
 
-        else {
-            endingName = "Unrecorded Survival";
-            achievement = "No One Will Remember This";
-            description = "You survive, but no story is told. History moves on without you.";
-        }
-
-
+        // Default ending - anyone who didn't fit other categories
+        endingName = "Unrecorded Survival";
+        achievement = "No One Will Remember This";
+        description = "You survive, but no story is told. History moves on without you.";
     }
-
-
-
 }
