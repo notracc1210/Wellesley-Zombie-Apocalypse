@@ -31,6 +31,14 @@ public class Consequence
         return description;
     }
     
+    public int getHP(){
+        return consequence_HP;
+    }
+    
+    public int getAggressiveness(){
+        return consequence_aggresiveness;
+    }
+    
     public boolean causesGameOver(){
         return causesGameOver;
     }

@@ -162,7 +162,8 @@ public class Driver{
         }
         
         // Apply HP and aggressiveness changes
-        this.hp += o.getHPChange(); 
+        this.hp += consequence.getHP();
+        this.aggressiveness += consequence.getAggressiveness();
         
         // Handle special mechanics
         if(consequence.grantsRebirthToken()){
