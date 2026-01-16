@@ -52,7 +52,7 @@ public class Option
         
         return probabilisticConsequences.get(probabilisticConsequences.size() - 1).consequence;
     }
-    
+
     public int getHPChange(){
         if(consequence != null){
             return consequence.consequence_HP;
@@ -61,7 +61,7 @@ public class Option
         Consequence randomConsequence = getRandomConsequence();
         return randomConsequence.consequence_HP;
     }
-    
+
     public int getAggresivenessChange(){
         if(consequence != null){
             return consequence.consequence_aggresiveness;
